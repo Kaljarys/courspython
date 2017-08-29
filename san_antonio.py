@@ -11,18 +11,29 @@ characters = [
         "le chat potté",
         "Kirikou",
 ]
-user_name = input("Tapez entrée pour connaitre une autre citation ou B pour quitter le programme")
 
 
-def show_random_item(my_list):
-  #TODO: get a random number
- item = my_list[0] #get an item from the list, just the first one for now
- print(item) #TODO: show the quote in the interpreter
- return "program is over" #returned value
+import random
 
-print(show_random_item(quotes))
+def get_random_item(object_list):
+ rand_numb = random.randint(0, len(object_list) - 1) # get a random number
+ item = object_list[rand_numb] #get an item from the list, just the first one for now
+ return item #return the item
 
-for character in characters:
-    character.capitalize()
+def capitalize(words):
+    for word in words:
+        return word.capitalize()
+
+def message(character, quote):
+    capitalize(character)
+    capitalize(quote)
+    return "{} a dit {}".format(character, quote)
+
+user_answer = input("Tapez entrée pour connaitre une autre citation ou B pour quitter le programme.")
+
+while user_answer != "B":
+    print(message(get_random_item(character), get_random_item(quotes)))
+    user_answer = input("Tapez entrée pour connaitre une autre cittion ou B pour quitter l eprogramme")
+
 
   #show another quote
