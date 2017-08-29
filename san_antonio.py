@@ -1,6 +1,6 @@
 quotes = [ 
-        "Ecoutez-moi, Monsieur Shakespeare, nous avons beau être ou ne pas être, nous sommes !",
-        "On doit pouvoir choisir entre s'écouter parler et se faire entendre." 
+        "\"Ecoutez-moi, Monsieur Shakespeare, nous avons beau être ou ne pas être, nous sommes !\"",
+        "\"On doit pouvoir choisir entre s'écouter parler et se faire entendre.\"" 
 ]
 characters = [
         "alvin et les chipmunks",
@@ -32,8 +32,8 @@ def message(character, quote):
 user_answer = input("Tapez entrée pour connaitre une autre citation ou B pour quitter le programme.")
 
 while user_answer != "B":
-    print(message(get_random_item(character), get_random_item(quotes)))
-    user_answer = input("Tapez entrée pour connaitre une autre cittion ou B pour quitter l eprogramme")
+    print(message(get_random_item(characters), get_random_item(quotes)))
+    user_answer = input("Tapez entrée pour connaitre une autre citation ou B pour quitter le programme")
 
 
   #show another quote
